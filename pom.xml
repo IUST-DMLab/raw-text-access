@@ -7,7 +7,7 @@
     <groupId>ir.ac.iust.dml.kg.raw</groupId>
     <artifactId>raw-text-access</artifactId>
     <version>0.2.0</version>
-    <name>Raw Text service project</name>
+    <name>Raw Text service project - Access Modules</name>
 
 
     <properties>
