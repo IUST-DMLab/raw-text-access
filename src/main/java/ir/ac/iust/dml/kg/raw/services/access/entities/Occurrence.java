@@ -41,6 +41,8 @@ public class Occurrence {
   @DBRef
   @Indexed
   private User assignee;
+  @Indexed
+  private String depTreeHash;
 
   public ObjectId getUid() {
     return uid;
@@ -157,5 +159,13 @@ public class Occurrence {
 
   public void setAssignee(User assignee) {
     this.assignee = assignee;
+  }
+
+  public String getDepTreeHash() {
+    return depTreeHash;
+  }
+
+  public void setDepTreeHash(String depTreeHash) {
+    this.depTreeHash = depTreeHash;
   }
 }
