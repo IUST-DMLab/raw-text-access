@@ -20,7 +20,7 @@ public class DependencyPatternRepositoryImpl implements DependencyPatternReposit
     if (minCount != null) query.addCriteria(Criteria.where("count").gte(minCount));
     if (maxSentenceLength != null) query.addCriteria(Criteria.where("sentenceLength").lte(maxSentenceLength));
     if (approved != null) query.addCriteria(Criteria.where("relations.predicate").exists(approved));
-    query.with(new Sort(new Sort.Order(Sort.Direction.ASC, "count")));
+    query.with(new Sort(new Sort.Order(Sort.Direction.DESC, "count")));
     return OccurrenceRepositoryImpl.page(op, query, page, pageSize, DependencyPattern.class);
   }
 }
