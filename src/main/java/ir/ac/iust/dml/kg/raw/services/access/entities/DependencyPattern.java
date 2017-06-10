@@ -3,6 +3,7 @@ package ir.ac.iust.dml.kg.raw.services.access.entities;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.ArrayList;
@@ -16,7 +17,9 @@ public class DependencyPattern {
   @JsonIgnore
   private ObjectId uid;
   private String pattern;
+  @Indexed
   private Integer count;
+  @Indexed
   private Integer sentenceLength;
   private Set<String> samples = new HashSet<>();
   private List<RelationDefinition> relations = new ArrayList<>();
