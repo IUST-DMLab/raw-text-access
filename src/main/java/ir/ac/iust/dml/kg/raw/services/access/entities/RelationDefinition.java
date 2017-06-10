@@ -1,31 +1,33 @@
 package ir.ac.iust.dml.kg.raw.services.access.entities;
 
-public class RelationDefinition {
-  private Range subject;
-  private Range object;
-  private Range predicate;
+import java.util.List;
 
-  public Range getSubject() {
+public class RelationDefinition {
+  private List<Integer> subject;
+  private List<Integer> object;
+  private List<Integer> predicate;
+
+  public List<Integer> getSubject() {
     return subject;
   }
 
-  public void setSubject(Range subject) {
+  public void setSubject(List<Integer> subject) {
     this.subject = subject;
   }
 
-  public Range getObject() {
+  public List<Integer> getObject() {
     return object;
   }
 
-  public void setObject(Range object) {
+  public void setObject(List<Integer> object) {
     this.object = object;
   }
 
-  public Range getPredicate() {
+  public List<Integer> getPredicate() {
     return predicate;
   }
 
-  public void setPredicate(Range predicate) {
+  public void setPredicate(List<Integer> predicate) {
     this.predicate = predicate;
   }
 }
