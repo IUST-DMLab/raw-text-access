@@ -5,7 +5,9 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Document(collection = "dependencyPattern")
@@ -15,6 +17,7 @@ public class DependencyPattern {
   private ObjectId uid;
   private String pattern;
   private Set<String> samples = new HashSet<>();
+  private List<RelationDefinition> relations = new ArrayList<>();
 
   public DependencyPattern() {
   }
@@ -45,5 +48,13 @@ public class DependencyPattern {
 
   public void setSamples(Set<String> samples) {
     this.samples = samples;
+  }
+
+  public List<RelationDefinition> getRelations() {
+    return relations;
+  }
+
+  public void setRelations(List<RelationDefinition> relations) {
+    this.relations = relations;
   }
 }
