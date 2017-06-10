@@ -16,6 +16,8 @@ public class DependencyPattern {
   @JsonIgnore
   private ObjectId uid;
   private String pattern;
+  private Integer count;
+  private Integer sentenceLength;
   private Set<String> samples = new HashSet<>();
   private List<RelationDefinition> relations = new ArrayList<>();
 
@@ -40,6 +42,22 @@ public class DependencyPattern {
 
   public void setPattern(String pattern) {
     this.pattern = pattern;
+  }
+
+  public Integer getCount() {
+    return count;
+  }
+
+  public void setCount(Integer count) {
+    this.count = count;
+  }
+
+  public Integer getSentenceLength() {
+    return sentenceLength;
+  }
+
+  public void setSentenceLength(Integer sentenceLength) {
+    this.sentenceLength = sentenceLength;
   }
 
   public Set<String> getSamples() {
