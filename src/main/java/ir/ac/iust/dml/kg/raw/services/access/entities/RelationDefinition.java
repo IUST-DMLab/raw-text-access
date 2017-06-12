@@ -6,6 +6,7 @@ public class RelationDefinition {
   private List<Integer> subject;
   private List<Integer> object;
   private List<Integer> predicate;
+  private double accuracy;
 
   public List<Integer> getSubject() {
     return subject;
@@ -29,5 +30,13 @@ public class RelationDefinition {
 
   public void setPredicate(List<Integer> predicate) {
     this.predicate = predicate;
+  }
+
+  public double getAccuracy() {
+    return accuracy;
+  }
+
+  public void setAccuracy(double accuracy) {
+    this.accuracy = accuracy;
   }
 }
