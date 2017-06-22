@@ -17,6 +17,7 @@ public class Occurrence {
   private ObjectId uid;
   @Indexed
   private int occurrence;
+  @Indexed
   private String normalized;
   @JsonIgnore
   private List<String> words;
