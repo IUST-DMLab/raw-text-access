@@ -15,4 +15,7 @@ public interface OccurrenceRepository extends MongoRepository<Occurrence, Object
   Page<Occurrence> findAll(int minOccurrence, Pageable pageable);
 
   Page<Occurrence> findByPredicateOrApproved(String predicate, Boolean approved, Pageable pageable);
+
+  @Query("{ normalized: ?0 }")
+  Occurrence getByNormalized(String sentence);
 }
