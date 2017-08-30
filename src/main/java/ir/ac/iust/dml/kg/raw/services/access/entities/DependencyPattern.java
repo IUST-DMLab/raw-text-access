@@ -23,6 +23,7 @@ public class DependencyPattern {
   private Integer sentenceLength;
   private Set<String> samples = new HashSet<>();
   private List<RelationDefinition> relations = new ArrayList<>();
+  private User selectedByUser;
 
   public DependencyPattern() {
   }
@@ -77,5 +78,13 @@ public class DependencyPattern {
 
   public void setRelations(List<RelationDefinition> relations) {
     this.relations = relations;
+  }
+
+  public User getSelectedByUser() {
+    return selectedByUser;
+  }
+
+  public void setSelectedByUser(User selectedByUser) {
+    this.selectedByUser = selectedByUser;
   }
 }
