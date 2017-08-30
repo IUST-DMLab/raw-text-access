@@ -14,8 +14,11 @@ public class ArticleRepositoryImpl implements ArticleRepositoryCustom {
   private MongoTemplate op;
 
   @Override
-  public Page<Article> search(int page, int pageSize, Integer minPercentOfRelations, Boolean approved) {
+  public Page<Article> search(int page, int pageSize, String path, String title,
+                              Integer minPercentOfRelations, Boolean approved) {
     Query query = new Query();
+    if (path != null) query.addCriteria(Criteria.where("path").regex(path));
+    if (title != null) query.addCriteria(Criteria.where("title").regex(title));
     if (minPercentOfRelations != null)
       query.addCriteria(Criteria.where("percentOfRelations").gte(minPercentOfRelations));
     if (approved != null) query.addCriteria(Criteria.where("approved").is(approved));
