@@ -32,6 +32,9 @@ public class OccurrenceRepositoryImpl implements OccurrenceRepositoryCustom {
     if (approved != null) query.addCriteria(Criteria.where("approved").is(approved));
     if (assignee != null) query.addCriteria(Criteria.where("assignee").exists(assignee));
     if (assigneeUser != null) query.addCriteria(Criteria.where("assignee").is(assigneeUser));
+    query.with(new Sort(
+        new Sort.Order(Sort.Direction.DESC, "selectedByUser"),
+        new Sort.Order(Sort.Direction.DESC, "occurrence")));
     return page(op, query, page, pageSize, Occurrence.class);
   }
 

@@ -31,6 +31,10 @@ public class Article {
     return uid.toHexString();
   }
 
+  public void setIdentifier(String identifier) {
+    this.uid = new ObjectId(identifier);
+  }
+
   public ObjectId getUid() {
     return uid;
   }
