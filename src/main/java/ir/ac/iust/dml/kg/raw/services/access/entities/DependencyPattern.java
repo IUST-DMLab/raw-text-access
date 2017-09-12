@@ -17,6 +17,7 @@ public class DependencyPattern {
   @Id
   @JsonIgnore
   private ObjectId uid;
+  @Indexed
   private String pattern;
   @Indexed
   private Integer count;
