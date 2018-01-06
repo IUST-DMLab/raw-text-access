@@ -12,6 +12,8 @@ public class RelationDefinition {
   private List<Integer> subject;
   private List<Integer> object;
   private List<Integer> predicate;
+  private String manualPredicate;
+  private String mandatoryWord;
   private double accuracy;
 
   public List<Integer> getSubject() {
@@ -44,5 +46,21 @@ public class RelationDefinition {
 
   public void setAccuracy(double accuracy) {
     this.accuracy = accuracy;
+  }
+
+  public String getManualPredicate() {
+    return manualPredicate;
+  }
+
+  public void setManualPredicate(String manualPredicate) {
+    this.manualPredicate = manualPredicate;
+  }
+
+  public String getMandatoryWord() {
+    return mandatoryWord;
+  }
+
+  public void setMandatoryWord(String mandatoryWord) {
+    this.mandatoryWord = mandatoryWord;
   }
 }
